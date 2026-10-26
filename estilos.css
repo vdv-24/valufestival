@@ -1,0 +1,784 @@
+* {
+  box-sizing: border-box;
+}
+
+.clr{
+  clear: both;
+}
+
+@font-face {
+  font-family: 'titulos';
+  src: url(fuentes/ChangaOne-Regular.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'textos';
+  src: url(fuentes/Nunito-VariableFont_wght.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+p, .lugar{
+  font-family: 'textos', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  padding: 0 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, .botonviaje , .botonartistasprincipales, .botonvolver, .mail{
+  font-family: 'titulos', sans-serif;
+}
+
+.menu{
+  font-family: 'titulos', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  background-color: #fffcf6;
+  color: #222;
+  font-size: 20px;
+}
+
+.header {
+  background-color: #eaff00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.imgheader {
+  max-width: 75%;
+  width: auto;
+  height: auto;
+  max-height: 42px;
+  object-fit: contain;
+}
+
+.hamburguesa {
+  width: 32px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.hamburguesa span {
+  width: 16px;
+  height: 2px;
+  background-color: #222;
+}
+
+.checkmenu {
+  display: none;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f9447f;
+  border-top: 5px solid #00f3ed;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu li {
+  width: 100%;
+  text-align: center;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 10px;
+  color: #eaff00;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background-color: #eaff00;
+  color: #f9447f;
+}
+
+.checkmenu:checked~.menu {
+  display: block;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+section {
+  margin: 10px;
+}
+
+.seccion1 {
+  background-color: #eaff00;
+  border-radius: 15px;
+  padding: 14px 10px 10px;
+  text-align: center;
+  position: relative;
+  margin-top: 35px;
+}
+
+.seccion2 {
+  background-color: #eaff00;
+  border-radius: 15px;
+  padding: 14px 10px 10px;
+  text-align: center;
+  position: relative;
+  margin-top: 35px;
+}
+
+h2 {
+  display: table;
+  margin: -22px auto 7px;
+  padding: 2px 9px;
+  background-color: #f9447f;
+  color: white;
+  border: 3px solid #00f3ed;
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+}
+
+.seccion1 .lugar {
+  font-size: 11px;
+}
+
+.botonartistasprincipales,
+.botonviaje {
+  display: table;
+  margin: 12px auto 0;
+  padding: 8px 12px;
+  background-color: #f9447f;
+  color: white;
+  border: 2px solid #00f3ed;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.seccion2 {
+  margin-top: 20px;
+}
+
+
+
+.seccionvideo {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  margin-bottom: 20px;
+}
+
+.videomarco {
+  width: 42%;
+  max-width: 360px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 4px solid transparent;
+  background-image: linear-gradient(#222, #222), linear-gradient(45deg, #eaff00 0%, #eaff00 33%, #f9447f 33%, #f9447f 66%, #00f3ed 66%, #00f3ed 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.videomarco iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.seccion3 {
+  background-color: #eaff00;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin-top: 22px;
+  text-align: center;
+}
+
+.seccion4 {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.galeria {
+  display: inline-block; 
+  text-align: center;
+  padding: 8px 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.galeria img:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.footer {
+  background: #eaff00;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 20px !important;
+  box-sizing: border-box;
+}
+
+.footer .organizan {
+  margin: 0 0 15px 0 !important;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.footer .logos {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 40px;
+  width: 100% !important;
+  margin-bottom: 20px !important;
+}
+
+
+.bancolombia,
+.jumbo,
+.colombiana {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.footer .logos img {
+  width: auto !important;
+  height: 45px !important;
+  max-width: 100px !important;
+  object-fit: contain !important;
+}
+
+.footer .mail {
+  display: inline-block !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  margin: 15px auto 0 !important;
+  padding: 8px 20px !important;
+  background-color: #f9447f;
+  color: white;
+  border: 2px solid #00f3ed;
+  border-radius: 20px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  text-align: center !important;
+  opacity: 1 !important;
+}
+
+
+
+
+
+
+
+
+/* Tablet y computador */
+@media (min-width: 768px) {
+
+  .header {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0 0;
+    overflow: visible;
+  }
+
+  .imgheader {
+    display: block;
+    width: auto;
+    max-width: 500px;
+    height: 48px;
+    max-height: none;
+    margin: 0 auto 12px;
+    object-fit: contain;
+    transform: none;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: static;
+    top: auto;
+    left: auto;
+    border-top: 5px solid #00f3ed;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .menu li {
+    width: auto;
+  }
+
+  .menu a {
+    padding: 18px 15px;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .menu a:hover {
+    border-radius: 5px;
+  }
+
+  main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 35px 20px;
+    padding: 35px 25px 25px;
+    box-sizing: border-box;
+  }
+
+  .banner {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+  }
+
+  .banner img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .seccion1,
+  .seccion2 {
+    flex: 1 1 calc(50% - 10px) !important;
+    width: calc(50% - 10px) !important;
+    max-width: calc(50% - 10px) !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .seccionvideo {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 20px 0 !important;
+  }
+
+  .videomarco {
+    width: 80% !important;
+    max-width: 800px !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  .seccionvideo iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .seccion3 {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .seccion4 {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+  }
+
+  .galeria {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .galeria img {
+    flex: 1;
+    width: calc(33.333% - 10px);
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 289 / 457;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .galeria img:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+  }
+
+
+  .footer {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    padding: 30px 50px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .footer .organizan {
+    margin: 0 !important;
+    width: auto !important;
+    text-align: left !important;
+    font-size: 18px !important;
+  }
+
+  .footer .logos {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 60px !important;
+    margin: 0 !important;
+    width: auto !important;
+  }
+
+  .footer .logos img {
+    height: 100px !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+
+  .footer .correo,
+  .footer .mail {
+    margin: 0 !important;
+    width: auto !important;
+    text-align: right !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo páginas internas */
+.enlaceinicio {
+  display: flex;
+  align-items: center;
+}
+
+.paginainterna {
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 10px;
+  min-height: 65vh;
+  justify-content: center;
+}
+
+.titulopagina {
+  background-color: #f9447f;
+  color: white;
+  border: 3px solid #00f3ed;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+  margin: 10px auto 18px;
+}
+
+.diaartistas {
+  background-color: #eaff00;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 25px 0;
+}
+
+.diaartistas h2 {
+  display: block;
+  background: none;
+  color: #f9447f;
+  border: none;
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 20px;
+}
+
+.listaartistas {
+  gap: 10px;
+}
+
+.diaartistas {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.listaartistas {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 25px;
+  width: 100% !important;
+}
+
+.artista {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.artista h3 {
+  order: 1 !important;
+  margin: 15px 0 5px 0 !important;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.artista p {
+  order: 2 !important;
+  margin: 0 0 5px 0 !important;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.artista img {
+  order: 3 !important;
+  width: 85% !important;
+  max-width: 280px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 8px;
+}
+
+.paginaviaje {
+  width: 90%;
+  margin: 0 auto;
+  padding: 25px 0;
+  color: #222;
+}
+
+.introviaje {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.introviaje p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.bloquesviaje {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bloqueinformativo {
+  background-color: #eaff00;
+  padding: 25px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.bloqueinformativo h2 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.bloqueinformativo p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.bloqueinformativo strong {
+  font-weight: bold;
+}
+
+.botonvolver {
+  display: table;
+  margin: 25px auto;
+  background-color: #f9447f;
+  color: white;
+  border: 3px solid #00f3ed;
+  border-radius: 20px;
+  padding: 8px 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .paginainterna {
+    padding: 25px;
+  }
+
+  .titulopagina {
+    font-size: 32px;
+  }
+
+  .listaartistas {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 40px !important;
+  }
+
+  .artista {
+    width: 30% !important;
+    max-width: 300px !important;
+  }
+
+  .listaartistas {
+    gap: 25px;
+  }
+
+  .artista {
+    max-width: 240px;
+  }
+
+  .artista img {
+    height: 230px;
+  }
+
+  .artista h3 {
+    font-size: 18px;
+  }
+
+  .paginaviaje {
+    max-width: 1200px;
+    padding: 40px 0;
+    justify-content: center;
+  }
+
+  .introviaje h1 {
+    font-size: 38px;
+  }
+
+  .introviaje p {
+    max-width: 900px;
+    margin: 15px auto;
+  }
+
+  .bloquesviaje {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 25px;
+  }
+
+  .bloqueinformativo {
+    flex: 1;
+    min-width: 0;
+  }
+}
